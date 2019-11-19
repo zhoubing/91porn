@@ -15,12 +15,6 @@ class Spider91PornList(scrapy.Spider):
         #     yield Request(url="http://www.kaichecc.com/category/guochan/page/" + str(index), dont_filter=True)
         #
 
-        # # https://stackoverflow.com/questions/31319184/xpath-preceding-sibling-correctly
-        # https://stackoverflow.com/questions/54260559/how-to-extract-text-written-outside-h4-tag-using-scrapy-python
-        # https://stackoverflow.com/questions/48951692/python-xpath-extract-text-outside-tag-based-on-the-span-text
-        # https://stackoverflow.com/questions/27293287/xpath-using-the-text-outside-a-tag
-        # https://stackoverflow.com/questions/3655549/xpath-containstext-some-string-doesnt-work-when-used-with-node-with-more?rq=1
-
     def parse(self, response):
         listchannel = response.xpath("//div[@class='listchannel']")
         for channel in listchannel:
